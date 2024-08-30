@@ -32,7 +32,7 @@
             <div class="container" id="app">
                 <div class="row">
                     <div class="col">
-                        <div class="card">
+                        <div class="card mb-2">
                             <div class="card-header fw-bold">
                               Ale - to do list
                             </div>
@@ -42,12 +42,21 @@
                                         {{todo.action}}
                                     </div>
                                     <div>
-                                        <button  type="button" class="btn btn-danger mx-1">Rimuovi</button>
+                                        <button @click="removeToDo(index)" type="button" class="btn btn-danger mx-1">Rimuovi</button>
                                         <button @click="checkDone(index)" type="button" class="btn btn-success">Fatto</button>
                                     </div>
                                 </li>
                             </ul>
-                          </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header fw-bold">
+                                Inserisci una nuova to-do
+                            </div>
+                            <input @keyup.enter="addToDo()" type="text" v-model="addedToDo" class="mx-2">
+                            <div>
+                                <button @click="addToDo()"class="btn btn-success m-2">Aggiungi</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -45,16 +45,29 @@ const app = createApp({
             done: false
         }
       ],
+      addedToDo: '',
     }
 },
 methods:{
     checkDone(i){
         if (this.todos[i].done == false){
-            this.todos[i].done = true
+            this.todos[i].done = true;
         }
         else{
-            this.todos[i].done = false
+            this.todos[i].done = false;
         }
+    },
+    removeToDo(i){
+        this.todos.splice(i, 1);
+    },
+    addToDo(){
+        if(this.addedToDo.trim() !== ''){
+            this.todos.push({
+                action: this.addedToDo,
+                done:false
+            }); 
+        }
+        this.addedToDo = '';
     },
 }
 }).mount('#app')
