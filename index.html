@@ -20,14 +20,33 @@
     <body>
 
         <!-- header -->
-        <header>
-                HEADER
+        <header >
+                <h1 class="fw-bold">
+                    TO DO LIST
+                </h1>
         </header>
         <!-- /header -->
 
         <!-- main -->
         <main>
-                MAIN
+            <div class="container" id="app">
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-header fw-bold">
+                              Ale - to do list
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex w-100 justify-content-between align-items-center">
+                                    Item 
+                                    <button type="button" class="btn btn-danger">Remove</button>
+                                </li>
+                              
+                            </ul>
+                          </div>
+                    </div>
+                </div>
+            </div>
         </main>
         <!-- /main -->
 
@@ -37,8 +56,8 @@
         </footer>
         <!-- /footer -->
 
-        <!-- BOOTSTRAP JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <!-- JS -->
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <script type="text/javascript" src="js/scripts.js"></script>
     </body>
 </html>
