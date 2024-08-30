@@ -37,11 +37,15 @@
                               Ale - to do list
                             </div>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item d-flex w-100 justify-content-between align-items-center">
-                                    Item 
-                                    <button type="button" class="btn btn-danger">Remove</button>
+                                <li v-for="todo, index in todos" class="list-group-item d-flex w-100 justify-content-between align-items-center" :class="{'text-decoration-line-through': todo.done == true }">
+                                    <div @click="checkDone(index)">
+                                        {{todo.action}}
+                                    </div>
+                                    <div>
+                                        <button  type="button" class="btn btn-danger mx-1">Rimuovi</button>
+                                        <button @click="checkDone(index)" type="button" class="btn btn-success">Fatto</button>
+                                    </div>
                                 </li>
-                              
                             </ul>
                           </div>
                     </div>
@@ -50,11 +54,6 @@
         </main>
         <!-- /main -->
 
-        <!-- footer -->
-        <footer>      
-                FOOTER     
-        </footer>
-        <!-- /footer -->
 
         <!-- JS -->
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

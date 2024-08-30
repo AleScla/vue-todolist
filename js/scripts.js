@@ -44,9 +44,20 @@ const app = createApp({
             action: 'Ore 00:00: dormire',
             done: false
         }
-      ]
+      ],
     }
-  }
-})
+},
+methods:{
+    checkDone(i){
+        if (this.todos[i].done == false){
+            this.todos[i].done = true
+        }
+        else{
+            this.todos[i].done = false
+        }
+    },
+}
+}).mount('#app')
 
-app.mount('#app')
+
+// text-decoration-line-through
